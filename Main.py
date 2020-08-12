@@ -43,15 +43,17 @@ if (time.time() >= expiry):
              {"expires_at": response["expires_at"]}
          }
     )
+    # pulls the latest data from the database
+    info = client["auth"]["users"].find_one({"athlete_id": athlete_id})
 
 # authorization header that pulls the access token from MongoDB
 header = {"Authorization": "Bearer " + info["access"]}
 # variables to create a Strava activity
-name = "Test"
+name = "Hardcore Core"
 typeOfActivity = "Workout"
 startDate = str(datetime.now())
-elapsedTime = str(1800)
-description = "This is a test."
+elapsedTime = "600"
+description = "Just completed a recovery workout in the Recover Athletics app!"
 
 # url in the Strava API to create an activity
 create_url = "https://www.strava.com/api/v3/activities?name=" + name + "&type=" + typeOfActivity + "&start_date_local=" + startDate + "&elapsed_time=" + elapsedTime + "&description=" + description
