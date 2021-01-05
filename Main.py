@@ -58,4 +58,4 @@ description = "Just completed a recovery workout in the Recover Athletics app!"
 # url in the Strava API to create an activity
 create_url = "https://www.strava.com/api/v3/activities?name=" + name + "&type=" + typeOfActivity + "&start_date_local=" + startDate + "&elapsed_time=" + elapsedTime + "&description=" + description
 # https post request to create an activity
-requests.post(create_url, headers = header)
+#requests.post(create_url, headers = header)
