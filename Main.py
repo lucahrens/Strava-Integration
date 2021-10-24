@@ -8,13 +8,13 @@ import time
 from datetime import datetime
 
 # my athlete_id (created by Strava for each user)
-athlete_id = 45807130
+athlete_id = 00000
 # API keys for my Strava dev account
-client_id = "49946"
-client_secret = "d34b8cb3feebcb58a8ddab131f6a0fb0542076bd"
+client_id = "00000"
+client_secret = "00000000"
 
 # connects to a MongoDB database with a document containing a users athlete_id, access token, when that access token expires, and a refresh token
-client = pymongo.MongoClient('mongodb+srv://lucas:Pizza112@stravarecords.fqrf5.mongodb.net/test?authSource=admin&replicaSet=atlas-4czmj0-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true')
+client = pymongo.MongoClient('mongodb+srv://lucas:0000@stravarecords.fqrf5.mongodb.net/test?authSource=admin&replicaSet=atlas-4czmj0-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true')
 
 # gets the data for a specific user
 info = client["auth"]["users"].find_one({"athlete_id": athlete_id})
